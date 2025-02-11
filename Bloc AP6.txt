@@ -1,0 +1,41 @@
+/*****************************PRESENTACION*************************
+NOMBRE: Luis Javier Cupa Acosta
+FECHA: 11/02/2025
+PROGRAMA: Actividad de programción 6
+CENTRO UNIVERSITARIO DE LOS ALTOS / UNIVERSIDAD DE GUADALAJARA
+PROFESOR: Sergio Franco Casillas
+DESCRIPCION:Un programa que muestre los datos requeridos
+********************************************************************/
+#include <iostream>
+using namespace std;
+
+int main(){
+    int lim, operacion;
+    do{
+    int suma=0, potencia=0;
+    cout<<"--Menu--"<<endl;
+    cout<<"1=Correr Programa"<<endl;
+    cout<<"2=Salir"<<endl;
+    cin>>operacion;
+    if (operacion==1){
+    cout<<"Ingrese un valor entero para determinar el limite de la cadena:"<<endl;
+    cin>>lim;
+    if (lim<0){
+        cout<<"No es un numero valido, vuelva a intentar"<<endl;
+    }
+    if (lim>2^31-1){
+        cout<<"No es un numero valido, vuelva a intentar"<<endl;
+    }
+    if (lim>0){
+        for (int i=1;i<=lim;i++){
+            cout<<i<<"^2=";
+            potencia=i*i;
+            cout<<potencia<<" "<<endl;
+            suma+=potencia;
+        }
+    cout<<suma<<endl;
+    }
+    }
+}while (operacion!=2);
+return 0;
+}
